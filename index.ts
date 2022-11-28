@@ -3,8 +3,7 @@ import type {
     Client, Snowflake, Guild, GuildMember, Invite, User
 } from 'discord.js';
 import {
-    Collection, GuildFeature, PermissionFlagsBits
-} from 'discord.js';
+    Collection, GuildFeature, PermissionFlagsBits } from 'discord.js';
 
 type JoinType = 'permissions' | 'normal' | 'vanity' | 'unknown';
 
@@ -186,8 +185,7 @@ class InvitesTracker extends EventEmitter {
         });
         if (!currentInvites) {
             // Si les invitations n'ont pas pu être récupérées
-            this.emit('guildMemberAdd', member, 'permissions', null);
-            return;
+            return this.emit('guildMemberAdd', member, 'permissions', null);
         }
         // Récupération des invitations en cache
         const cachedInvites = this.invitesCache.get(member.guild.id);
@@ -196,8 +194,7 @@ class InvitesTracker extends EventEmitter {
         this.invitesCacheUpdates.set(member.guild.id, Date.now());
         // Si il n'y avait pas de données en cache, on ne peut tout simplement pas déterminer l'invitation utilisée
         if (!cachedInvites) {
-            this.emit('guildMemberAdd', member, 'unknown', null);
-            return;
+            return this.emit('guildMemberAdd', member, 'unknown', null);
         }
 
         // Ensuite, on compare le cache et les données actuelles (voir commentaires de la fonction)

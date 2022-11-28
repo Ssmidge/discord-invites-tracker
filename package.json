@@ -1,8 +1,8 @@
 {
-    "name": "@androz2091/discord-invites-tracker",
+    "name": "@ssmidge/discord-invites-tracker",
     "version": "1.2.3",
     "main": "lib/index.js",
-    "author": "Androz2091 <androz2091@gmail.com>",
+    "author": "Androz2091 <androz2091@gmail.com> && Ssmidge <contact@ssmidge.xyz>",
     "license": "MIT",
     "scripts": {
         "build": "tsc"

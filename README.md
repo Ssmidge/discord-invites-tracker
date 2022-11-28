@@ -70,3 +70,17 @@ const tracker = InvitesTracker.init(client, {
     exemptGuild: (guild) => guild.name.includes('nude')
 });
 ```
+
+## Active guilds
+
+```js
+const InvitesTracker = require('@androz2091/discord-invites-tracker');
+const tracker = InvitesTracker.init(client, {
+    fetchGuilds: true,
+    fetchVanity: true,
+    fetchAuditLogs: true,
+
+    // only servers that contain "happy" in their name will be processed
+    activeGuild: (guild) => guild.name.includes('happy')
+});
+```
