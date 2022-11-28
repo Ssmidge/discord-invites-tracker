@@ -1,13 +1,13 @@
-# [Discord Invites Tracker](https://npmjs.com/@androz2091/discord-invites-tracker)
+# [Discord Invites Tracker](https://npmjs.com/@ssmidge/discord-invites-tracker)
 
 Track the invites in your servers to know who invited who and with which invite!
 
 ## Installation
 
 ```sh
-npm install @androz2091/discord-invites-tracker
+npm install @ssmidge/discord-invites-tracker
 # or
-yarn add @androz2091/discord-invites-tracker
+yarn add @ssmidge/discord-invites-tracker
 ```
 
 ## Example
@@ -18,7 +18,7 @@ const client = new Discord.Client({
     intents: [Discord.GatewayIntentBits.Guilds]
 });
 
-const InvitesTracker = require('@androz2091/discord-invites-tracker');
+const InvitesTracker = require('@ssmidge/discord-invites-tracker');
 const tracker = InvitesTracker.init(client, {
     fetchGuilds: true,
     fetchVanity: true,
@@ -60,7 +60,7 @@ client.login(process.env.TOKEN);
 ## Ignoring guilds
 
 ```js
-const InvitesTracker = require('@androz2091/discord-invites-tracker');
+const InvitesTracker = require('@ssmidge/discord-invites-tracker');
 const tracker = InvitesTracker.init(client, {
     fetchGuilds: true,
     fetchVanity: true,
